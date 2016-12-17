@@ -1,0 +1,4 @@
+[submodule "openvr"]
+	path = openvr
+	url = https://github.com/zeroae/openvr
+	branch = lean
