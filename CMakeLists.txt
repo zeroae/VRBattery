@@ -14,4 +14,5 @@ add_subdirectory(openvr)
 add_subdirectory(Application)
 
 set(CPACK_GENERATOR "ZIP")
+set(CPACK_PACKAGE_VERSION $ENV{APPVEYOR_BUILD_VERSION})
 INCLUDE(CPack)
