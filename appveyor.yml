@@ -5,8 +5,7 @@ branches:
   only:
   - master
 environment:
-  github_api_key:
-    secure: HQRCTpyiWV9bLFW8sJRCZI1YwijEW8bd80nIxnj2IxZPnUiSSKEoupidNHCzJRtx
+  QT_DIR: C:/Qt/5.7/msvc2015
 install:
   - git submodule update --init --recursive
 build_script:
@@ -15,7 +14,7 @@ build_script:
 
     cd build
     
-    cmake .. -DCMAKE_PREFIX_PATH=C:/Qt/5.7/msvc2015/lib/cmake
+    cmake .. -DCMAKE_PREFIX_PATH=%QT_DIR%/lib/cmake
 
     cmake --build . --config Release --target package
 deploy:

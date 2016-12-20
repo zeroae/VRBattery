@@ -41,7 +41,7 @@ function(WinDeployQt)
 	endforeach()
 
 	find_program(_deploy_PROGRAM windeployqt
-		PATHS $ENV{QTDIR}/bin/)
+		PATHS $ENV{QT_DIR}/bin/)
 	if(_deploy_PROGRAM)
 		message(STATUS "Found ${_deploy_PROGRAM}")
 	else()
