@@ -18,7 +18,7 @@ build_script:
 
     cmake --build . --config Release --target package
 artifacts:
-- path: build/VRBattery-$(version)-win32.zip
+- path: build/VRBattery-$(appveyor_build_version)-win32.zip
   name: VRBattery
 deploy:
 - provider: GitHub
