@@ -1,0 +1,31 @@
+version: 0.0.{build}
+pull_requests:
+  do_not_increment_build_number: true
+branches:
+  only:
+  - master
+environment:
+  QT_DIR: C:/Qt/5.7/msvc2015
+install:
+  - git submodule update --init --recursive
+build_script:
+- cmd: >-
+    mkdir build
+
+    cd build
+    
+    cmake .. -DCMAKE_PREFIX_PATH=%QT_DIR%/lib/cmake
+
+    cmake --build . --config Release --target package
+artifacts:
+- path: build/VRBattery-$(appveyor_build_version)-win32.zip
+  name: VRBattery
+deploy:
+- provider: GitHub
+  auth_token:
+    secure: HQRCTpyiWV9bLFW8sJRCZI1YwijEW8bd80nIxnj2IxZPnUiSSKEoupidNHCzJRtx
+  release: VRBattery-$(appveyor_build_version)
+  description: VRBattery continuous integration release.
+  artifact: VRBattery
+  draft: true
+  prerelease: true
