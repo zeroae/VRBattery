@@ -1,0 +1,17 @@
+version: 0.0.{build}
+pull_requests:
+  do_not_increment_build_number: true
+environment:
+  github_api_key:
+    secure: HQRCTpyiWV9bLFW8sJRCZI1YwijEW8bd80nIxnj2IxZPnUiSSKEoupidNHCzJRtx
+build_script:
+- cmd: >-
+    mkdir build
+
+    cmake .. C:\Qt\5.7\ms2015\lib\cmake
+
+    cmake --build . --config Release --target package
+deploy:
+- provider: GitHub
+  auth_token:
+    secure: HQRCTpyiWV9bLFW8sJRCZI1YwijEW8bd80nIxnj2IxZPnUiSSKEoupidNHCzJRtx
