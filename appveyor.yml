@@ -24,3 +24,8 @@ deploy:
 - provider: GitHub
   auth_token:
     secure: HQRCTpyiWV9bLFW8sJRCZI1YwijEW8bd80nIxnj2IxZPnUiSSKEoupidNHCzJRtx
+  release: VRBattery-$(appveyor_build_version)
+  description: VRBattery continuous integration release.
+  artifact: VRBattery
+  draft: true
+  prerelease: true
