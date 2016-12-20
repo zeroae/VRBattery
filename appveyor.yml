@@ -17,6 +17,9 @@ build_script:
     cmake .. -DCMAKE_PREFIX_PATH=%QT_DIR%/lib/cmake
 
     cmake --build . --config Release --target package
+artifacts:
+- path: build/VRBattery-0.1.1-win32.zip
+  name: VRBattery-{version}-win32.zip
 deploy:
 - provider: GitHub
   auth_token:
