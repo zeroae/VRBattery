@@ -11,7 +11,9 @@ build_script:
 - cmd: >-
     mkdir build
 
-    cmake .. C:\Qt\5.7\ms2015\lib\cmake
+    cd build
+    
+    cmake .. -DCMAKE_PREFIX_PATH=C:/Qt/5.7/msvc2015/lib/cmake
 
     cmake --build . --config Release --target package
 deploy:
