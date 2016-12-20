@@ -1,6 +1,9 @@
 version: 0.0.{build}
 pull_requests:
   do_not_increment_build_number: true
+branches:
+  only:
+  - master
 environment:
   github_api_key:
     secure: HQRCTpyiWV9bLFW8sJRCZI1YwijEW8bd80nIxnj2IxZPnUiSSKEoupidNHCzJRtx
