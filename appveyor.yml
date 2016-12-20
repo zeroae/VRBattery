@@ -7,6 +7,8 @@ branches:
 environment:
   github_api_key:
     secure: HQRCTpyiWV9bLFW8sJRCZI1YwijEW8bd80nIxnj2IxZPnUiSSKEoupidNHCzJRtx
+install:
+  - git submodule update --init --recursive
 build_script:
 - cmd: >-
     mkdir build
