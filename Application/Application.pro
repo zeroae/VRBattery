@@ -24,8 +24,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+    batteryinfowidget.cpp \
+    openvroverlaycontroller.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += \
+    batteryinfowidget.h \
+    openvroverlaycontroller.h
 
-FORMS    += mainwindow.ui
+FORMS    += \
+    batteryinfowidget.ui
