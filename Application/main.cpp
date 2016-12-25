@@ -18,6 +18,7 @@ int main(int argc, char *argv[])
     }
     else {
         qInfo() << "Unable to start VROverlayController";
+        pWidget->show();
     }
     return a.exec();
 }
